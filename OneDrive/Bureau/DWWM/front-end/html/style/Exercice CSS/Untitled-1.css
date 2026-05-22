@@ -1,0 +1,198 @@
+/* competences.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  padding: 60px 24px;
+}
+
+.section-comp {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-comp h1 {
+  font-size: 2rem;
+  color: #e6edf3;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+/* --- GRILLE --- */
+
+.grille {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* --- CARTES SIMPLES --- */
+
+.carte {
+  flex: 1 1 280px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: default;
+  /*
+    transition sur transform et box-shadow pour anticiper le survol.
+    On utilise transition ici de façon pragmatique avant la section 9.2.
+  */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carte:hover {
+  /*
+    translateY(-6px) : soulève la carte de 6px vers le haut.
+    scale(1.02) : agrandit très légèrement pour accentuer l'effet.
+    Combinés, ils donnent une impression de profondeur et d'interactivité.
+  */
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* --- ICÔNES --- */
+
+.carte-icone {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #ffffff;
+  /*
+    transform-origin: bottom center :
+    la rotation part du bas de l'icône, comme une aiguille qui pivote.
+    L'effet est plus naturel qu'une rotation autour du centre.
+  */
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+}
+
+/* Au survol de la carte, l'icône tourne légèrement */
+.carte:hover .carte-icone {
+  transform: rotate(-8deg);
+}
+
+/* Couleurs d'icône par technologie */
+.ic-html  { background-color: #e34c26; }
+.ic-css   { background-color: #264de4; }
+.ic-js    { background-color: #f0db4f; color: #0d1117; }
+.ic-react { background-color: #61dafb; color: #0d1117; }
+.ic-git   { background-color: #f05032; }
+.ic-figma { background-color: #a259ff; }
+
+.carte-corps h2 {
+  font-size: 1rem;
+  color: #e6edf3;
+  margin-bottom: 6px;
+}
+
+.carte-corps p {
+  font-size: 0.8125rem;
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+/* --- CARTE RETOURNABLE --- */
+
+/*
+  La carte-flip est la scène 3D : elle définit la perspective
+  et les dimensions. Elle ne se transforme pas elle-même.
+*/
+.carte-flip {
+  perspective: 900px;
+  /*
+    On retire les propriétés de la carte standard
+    qui entreraient en conflit avec la structure 3D.
+  */
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: 200px;
+}
+
+/* Annuler le hover de .carte sur .carte-flip */
+.carte-flip:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/*
+  L'élément intérieur est celui qui se retourne.
+  transform-style: preserve-3d : ses enfants (face-avant et face-arriere)
+  vivent dans l'espace 3D — sans ça, la face arrière serait invisible.
+*/
+.carte-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Au survol, l'inner fait un demi-tour sur l'axe Y */
+.carte-flip:hover .carte-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Les deux faces sont superposées en position absolue */
+.face {
+  position: absolute;
+  inset: 0; /* Équivalent à top:0; right:0; bottom:0; left:0 */
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /*
+    backface-visibility: hidden :
+    cache la face quand elle est dos à l'observateur (retournée de 180°).
+    Sans ça, on verrait les deux faces en même temps, en miroir.
+  */
+  backface-visibility: hidden;
+}
+
+.face-avant {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.face-arriere {
+  background-color: #1a3a5c;
+  border: 1px solid #2e6da4;
+  /*
+    La face arrière est pré-retournée de 180°.
+    Quand l'inner fait son demi-tour, elle revient à 0° et devient lisible.
+  */
+  transform: rotateY(180deg);
+  justify-content: center;
+}
+
+.face-arriere h2 {
+  font-size: 1rem;
+  color: #a8c4e0;
+  margin-bottom: 4px;
+}
+
+.face-arriere p {
+  font-size: 0.8125rem;
+  color: #c8daf0;
+  line-height: 1.65;
+}

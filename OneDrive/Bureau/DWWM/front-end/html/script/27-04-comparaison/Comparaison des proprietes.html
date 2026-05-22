@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparaison des propriétés</title>
+    <script src="Comparaison des prorietes.js" defer></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .container {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comparaison de innerHTML, textContent et innerText</h1>
+    
+    <div id="exemple" class="container">
+        <h2>Mon titre</h2>
+        <p>Voici du <strong>texte en gras</strong> et du <em>texte en italique</em>.</p>
+        <p class="hidden">Ce paragraphe est caché.</p>
+    </div>
+    
+    <div class="container">
+        <h3>Résultats:</h3>
+        <p>innerHTML:</p>
+        <pre id="resultat-innerHTML"></pre>
+        
+        <p>textContent:</p>
+        <pre id="resultat-textContent"></pre>
+        
+        <p>innerText:</p>
+        <pre id="resultat-innerText"></pre>
+    </div>
+    
+     
+</body>
+</html>

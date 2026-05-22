@@ -1,0 +1,280 @@
+/* agence créative */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* CSS DE BASE - Mobile */
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #212124;
+  color: #2c2c2c;
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+/*  .header.header-inner.logo */
+.header.header-inner.logo{
+  text-align:center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 20px 15px;
+  background-color: antiquewhite;
+}
+.hero-texte{
+  margin-bottom: 36px;
+}
+
+.hero-texte h1{
+  color: #ffffff;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+
+}
+.accroche{
+  line-height: 1.7rem;
+  font-size: 14px;
+  border-radius: 2px;
+  transition: 0.2s ease;
+  color: #993838;
+}
+a{
+  text-decoration: none;
+  color: #8b8989;
+}
+
+.nav a{
+  background-color: rgba(95, 158, 160 0.1);
+  color: #a8c4e8;
+  text-decoration: none;
+  gap: 20px;
+}
+
+.nav a:hover{
+  background-color: blueviolet;
+}
+
+.btn-hero{
+  background-color: #b5e40c;
+  color: #000;
+  border: 3px;
+  text-align: center;
+  padding-bottom: 4px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.btn-hero a:hover{
+  text-decoration: none;
+}
+
+.hero-visuel{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.forme{
+  width: 80px;
+  height: 80px;
+  background-color: #0d0d0d;
+  text-decoration: solid;
+  flex-shrink: 0;
+
+}
+.forme.forme-1{
+  background-color: #e8ff47;
+  border-radius: 60px;
+  
+
+}
+
+.forme.forme-2{
+  background-color:#ff4d6d ;
+  border-radius: 20px;
+ 
+}
+
+.forme.forme-3{
+  background-color: #4dffd4;
+  border-radius: 15px;
+}
+
+/* section realisations */ 
+.realisations{
+  padding: 20px;
+  border-top: 1px solid rgba(red, green, blue, alpha);
+}
+
+.section-inner h2{
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  gap: 3px;
+  color: #2ec409;
+}
+.grille{
+  display: flex;
+  gap: 16px;
+}
+.categorie{
+  color: #09d480;
+  padding: 0 16px 14px;
+  font-size: 0.75rem;
+  text-transform:uppercase ;
+  letter-spacing: 1px;
+}
+
+
+.carte-projet{
+  color: #ffffff;
+  gap: 50px;
+  background-color: #06063f;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.carte-visuel{
+  width: 100%;
+  height: 150px;
+}
+.carte-visuel.cv-1 h3{
+  color: #8a2be2;
+  padding: 30px;
+}
+
+.carte-visuel.cv-2 h3{
+  background-color: #ff4d6d;
+}
+
+.carte-visuel.cv-3 h3{
+  background-color: chocolate;
+
+
+}
+.carte-visuel.cv-4 h3{
+  background-color: cornflowerblue;
+
+}
+
+.footer{
+  padding:40px 0;
+  text-align:center;
+}
+.logo.footer{
+  color: #50b80b;
+  text-align: center;
+  display: block;
+  margin-bottom: auto;
+}
+.baseline{
+  margin:10px 0;
+  color:#ccc;
+}
+
+.copyright{
+  font-size:0.8rem;
+  color:#777;
+}
+
+
+/* ======================
+        SM 576px
+====================== */
+
+@media (min-width: 375px) {
+  .header{
+    padding: 24px 60px;
+  }
+
+
+  .hero-visuel{
+    flex-shrink: 1;
+    padding: 40px 32px;
+  }
+  .forme{
+    padding: 40px;
+  }
+
+}
+
+/* ======================
+   MD 768px
+   ====================== */
+
+@media (min-width:768px){
+
+.nav{
+  display:block;
+}
+
+.hero-texte h1{
+  font-size:2.6rem;
+}
+
+.grille{
+  grid-template-columns:1fr 1fr;
+}
+
+}
+
+/* ======================
+   LG 992px
+   ====================== */
+
+@media (min-width:992px){
+
+  .hero-inner{
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .hero-texte{
+    flex-grow: 1;
+  }
+
+  .hero-visuel{
+  flex:1;
+  justify-content:space-around;
+  }
+
+  
+  .grille{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .section-inner{
+    width:80%;
+  }
+}
+
+/* ======================
+   XL 1200px
+   ====================== */
+
+@media (min-width:1200px){
+
+.hero{
+  padding:120px 0;
+}
+
+.hero-texte h1{
+  font-size:3.2rem;
+}
+
+.section-inner{
+  max-width:1300px;
+}
+
+.grille{
+  gap:40px;
+}
+
+}

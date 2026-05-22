@@ -1,0 +1,129 @@
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+
+/* Style par défaut - Mode jour */
+body {
+    background-color: #e0f2ff;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.meteo-app {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0078d4;
+}
+
+/* Style Mode nuit */
+body.nuit {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.nuit .meteo-app {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.nuit h1 {
+    color: #0099ff;
+}
+
+/* Styles des boutons */
+.btns-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn-theme {
+    background-color: #0078d4;
+    color: white;
+}
+
+body.nuit #btn-theme {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Styles pour les cartes météo */
+.meteo-cartes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.meteo-carte {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: calc(33% - 20px);
+    transition: all 0.3s ease;
+}
+
+body.nuit .meteo-carte {
+    background-color: #3d3d3d;
+}
+
+/* Styles pour les conditions météo */
+.soleil {
+    background-color: #fffacd;
+    border-left: 4px solid #ffd700;
+}
+
+.nuageux {
+    background-color: #f0f0f0;
+    border-left: 4px solid #a9a9a9;
+}
+
+.pluie {
+    background-color: #e6f7ff;
+    border-left: 4px solid #4fc3f7;
+}
+
+body.nuit .soleil {
+    background-color: #665e00;
+    border-left: 4px solid #ac9500;
+}
+
+body.nuit .nuageux {
+    background-color: #4a4a4a;
+    border-left: 4px solid #6d6d6d;
+}
+
+body.nuit .pluie {
+    background-color: #003366;
+    border-left: 4px solid #0077cc;
+}
+
+/* Styles pour l'icône du bouton */
+#theme-icon {
+    margin-right: 5px;
+}

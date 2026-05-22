@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Piano Virtuel</title>
+    <link rel="stylesheet" href="LePianoVirtuel.css">
+</head>
+<body>
+    <h1>🎹 Mon Piano Virtuel 🎹</h1>
+    
+    <div class="instructions">
+        Appuyez sur les touches A, S, D, F, G, H, J, K pour jouer !
+    </div>
+    
+    <div class="note-actuelle">
+        Note jouée : <span id="note-affichee">Aucune</span>
+    </div>
+    
+    <div class="piano">
+        <div class="touche" data-key="a" data-note="Do">
+            <div class="lettre">A</div>
+            <div class="nom-note">Do</div>
+        </div>
+        
+        <div class="touche" data-key="s" data-note="Ré">
+            <div class="lettre">S</div>
+            <div class="nom-note">Ré</div>
+        </div>
+        
+        <div class="touche" data-key="d" data-note="Mi">
+            <div class="lettre">D</div>
+            <div class="nom-note">Mi</div>
+        </div>
+        
+        <div class="touche" data-key="f" data-note="Fa">
+            <div class="lettre">F</div>
+            <div class="nom-note">Fa</div>
+        </div>
+        
+        <div class="touche" data-key="g" data-note="Sol">
+            <div class="lettre">G</div>
+            <div class="nom-note">Sol</div>
+        </div>
+        
+        <div class="touche" data-key="h" data-note="La">
+            <div class="lettre">H</div>
+            <div class="nom-note">La</div>
+        </div>
+        
+        <div class="touche" data-key="j" data-note="Si">
+            <div class="lettre">J</div>
+            <div class="nom-note">Si</div>
+        </div>
+        
+        <div class="touche" data-key="k" data-note="Do">
+            <div class="lettre">K</div>
+            <div class="nom-note">Do</div>
+        </div>
+    </div>
+
+    <script src="LePianoVirtuel.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte au Trésor</title>
+    <link rel="stylesheet" href="Carte.css">
+</head>
+<body>
+    <div id="header">
+        <h1>🗺️ Carte au Trésor 🗺️</h1>
+        <p>Cliquez sur la carte pour chercher le trésor !</p>
+        <button id="new-treasure">Nouveau trésor</button>
+    </div>
+
+    <div id="instructions">
+        <p><strong>Comment jouer :</strong> Le trésor est caché quelque part sur la carte. Cliquez pour le chercher !</p>
+        <p><em>Faites défiler la page pour voir comment les coordonnées changent.</em></p>
+    </div>
+
+    <div id="treasure-map">
+        <div id="treasure" class="hidden">💎</div>
+    </div>
+
+    <div id="coordinates-display">
+        <h3>📍 Informations du dernier clic</h3>
+        <div class="coord-line">
+            <span class="label">Client (fenêtre):</span>
+            <span id="client-info">Cliquez sur la carte !</span>
+        </div>
+        <div class="coord-line">
+            <span class="label">Page (document):</span>
+            <span id="page-info">Cliquez sur la carte !</span>
+        </div>
+        <div class="coord-line">
+            <span class="label">Distance du trésor:</span>
+            <span id="distance-info">🤔</span>
+        </div>
+    </div>
+
+    <div id="spacer">
+        <h2>Zone de défilement</h2>
+        <p>Remontez vers la carte et continuez à chercher le trésor !</p>
+        <p>Observez comment les coordonnées <strong>client</strong> et <strong>page</strong> diffèrent quand vous avez scrollé.</p>
+        <div class="arrow">↑ Remontez jouer ↑</div>
+    </div>
+
+    <script src="Carte.js"></script>
+</body>
+</html>

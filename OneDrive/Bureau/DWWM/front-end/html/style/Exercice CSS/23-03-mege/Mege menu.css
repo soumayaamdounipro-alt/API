@@ -1,0 +1,238 @@
+/* competences.css */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  background-color: cornflowerblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 60px 24px;
+}
+
+
+/* HEADER */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px;
+  width: 300;
+  height: 200;
+  max-height: 100%;
+  position: fixed;
+  background-color: rgb(87, 87, 201);
+  border-bottom: 1px solid var(--header-border);
+
+}
+
+.header-inner{
+  max-width: 1200px;
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 12px;
+  height: 60px;
+  align-items: center;
+}
+
+.logo{
+  font-size: 1.50rem;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-right:auto ;
+  letter-spacing: 2px;
+  color: #f3ea70;
+} 
+
+.nav{
+  padding-bottom:0 ;
+  display:flex ;
+  align-items: stretch;
+  gap: 2px;
+}
+
+.nav-item{
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+.nav-lien{
+  display: inline-block;
+  text-align: center;
+  padding: 0.50rem  1.5rem;
+  gap: 10rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.18s ease, background 0.18s ease;
+  text-decoration: none;
+  height: 100%;
+}
+.nav-lien:hover{
+  color: #062077;
+  background-color: rgba(6, 32, 119 0.5);
+}
+
+.btn-nav{
+  border-bottom: 2px;
+  display: flexbox;
+  color: #062077;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.btn-nav:hover{
+  background-color: #f3ea70;
+}
+
+.nav-item .nav-item-menu{
+  text-align: center;
+}
+
+.nav-lien:hover.nav-lien-actif {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-lien .nav-lien-actif{
+  border-bottom: #062077;
+
+}
+
+.fleche {
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+
+/* Rotation de la flèche quand le menu est ouvert */ 
+.nav-item-menu:hover .fleche {
+  transform: rotate(180deg);
+}
+
+
+.mega-menu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+
+  width: 720px;
+  display: flex;
+  gap: 0;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 16px;
+  box-shadow: var(--menu-shadow);
+  padding: 1.8rem;
+  gap: 0;
+
+  /* État invisible */
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity    0.2s ease-in,
+    visibility 0.2s ease-in,
+    transform  0.2s ease-in;
+  
+}
+
+
+.nav-item-menu:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  transition:
+    opacity    0.28s ease-out,
+    visibility 0.28s ease-out,
+    transform  0.28s ease-out;
+}
+
+ .maga-col{
+  opacity: 0;
+  transform: translateY(6px);
+  flex: 1px;
+  border-right: 1px solid var(--menu-border);
+  padding: 0 1.4rem;
+  transition: 
+  opacity  0.22s ease-out,
+  transform 0.22s ease-out;
+}
+
+.mega-col:first-child { padding-left: 0; }
+.mega-col:last-child  { padding-right: 0; border-right: none; }
+
+.mega-titre{
+  text-align: center;
+  padding: 13px;
+  font-size: 1.4rem;
+  text-decoration: black;
+}
+
+.maga-lien-desc{
+  display: flex;
+  direction: none;
+  text-align: center;
+  color: #062077;
+}
+
+.nav-item-menu:hover .mega-col:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0ms;
+}
+.nav-item-menu:hover .mega-col:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 60ms;
+}
+.nav-item-menu:hover .mega-col:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 120ms;
+}
+
+.mega-col:nth-child(1) { transition-delay: 60ms; }
+.mega-col:nth-child(2) { transition-delay: 30ms; }
+.mega-col:nth-child(3) { transition-delay: 0ms;  }
+
+/* ─── Hero placeholder ───────────────────────────────────────── */
+.page-hero {
+  margin-top: 50px;
+  max-width: 700px;
+  margin: 263px auto;
+  padding-inline: 2rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  color: var(--text-desc);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+

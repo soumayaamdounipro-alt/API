@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#texte-principal {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.boutons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+#btn-sombre {
+    background-color: #2d3436;
+    color: white;
+}
+
+#btn-clair {
+    background-color: #dfe6e9;
+    color: #2d3436;
+}
+
+.info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Thème sombre */
+.theme-sombre {
+    background-color: #2d3436;
+    color: white;
+}
+
+.theme-sombre .container {
+    background-color: #636e72;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+.theme-sombre #texte-principal {
+    background-color: #74b9ff;
+    color: white;
+}
+
+.theme-sombre #btn-clair {
+    background-color: #fdcb6e;
+    color: #2d3436;
+}
+
+/* Thème clair */
+.theme-clair {
+    background-color: #f8f9fa;
+    color: #2d3436;
+}
+
+.theme-clair .container {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.theme-clair #texte-principal {
+    background-color: #e17055;
+    color: white;
+}
+
+.theme-clair #btn-sombre {
+    background-color: #74b9ff;
+    color: white;
+}

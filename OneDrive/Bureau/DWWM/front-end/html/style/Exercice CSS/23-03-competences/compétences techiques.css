@@ -1,0 +1,236 @@
+/* compétences techniques.css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+   
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+/* header section-comp 
+.section-comp{
+    width: 280px;
+    height: 250px;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+*/
+
+.section-comp h1 {
+  font-size: 2rem;
+  color: #e6edf3;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+/*
+.section-comp h1{
+    text-align: center;
+    padding: 30px;
+    color: #fffefe;
+    letter-spacing: 0.5px;
+    
+}
+*/
+/* class grille */
+.grille{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carte{
+    flex: 1 1 280px;
+    min-width: 280px;
+    height: 250px;
+    background-color: cadetblue;
+    padding: 20px;
+    flex-grow: 0;
+    gap: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.carte:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0,0,0, 0.5);
+}
+.carte-icone {
+    overflow: hidden;
+    background-color: rgb(255, 208, 0);
+    border-radius: 16px;
+    padding:  10px 5px;
+    width: 90px;
+    height: 80px;
+    flex-shrink: 0;
+    font-weight:  35px bold;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.4rem;
+
+}
+/*
+.carte-corps h2{
+    text-decoration: underline;
+    text-align: center;
+    color: #1f8bb6;
+    transform: none;
+    font-size: 1.1rem;
+}
+*/
+
+
+
+.carte-corps p {
+  font-size: 0.8125rem;
+  color: #ffffffcb;
+  line-height: 1.6;
+}
+
+.carte-corps h2{
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-h);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em
+}
+
+.carte-corps h2:hover{
+    transform: none;
+    transform: rotate(-10deg);
+}
+
+
+
+/* .carte:hover .carte-icone{
+    transform: rotate(-10deg);
+}
+
+.carte-flip{
+    perspective: 900px;
+}
+.carte-flip:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+.carte-flip-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+    min-height: 200px;
+}
+
+.carte-flip:hover .carte-flip-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+} */
+
+/* --- CARTE RETOURNABLE --- */
+
+/*
+  La carte-flip est la scène 3D : elle définit la perspective
+  et les dimensions. Elle ne se transforme pas elle-même.
+*/
+.carte-flip {
+  perspective: 900px;
+  /*
+    On retire les propriétés de la carte standard
+    qui entreraient en conflit avec la structure 3D.
+  */
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: 200px;
+}
+
+/* Annuler le hover de .carte sur .carte-flip */
+.carte-flip:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/*
+  L'élément intérieur est celui qui se retourne.
+  transform-style: preserve-3d : ses enfants (face-avant et face-arriere)
+  vivent dans l'espace 3D — sans ça, la face arrière serait invisible.
+*/
+.carte-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Au survol, l'inner fait un demi-tour sur l'axe Y */
+.carte-flip:hover .carte-flip-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* Les deux faces sont superposées en position absolue */
+.face {
+  position: absolute;
+  inset: 0; /* Équivalent à top:0; right:0; bottom:0; left:0 */
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /*
+    backface-visibility: hidden :
+    cache la face quand elle est dos à l'observateur (retournée de 180°).
+    Sans ça, on verrait les deux faces en même temps, en miroir.
+  */
+  backface-visibility: hidden;
+}
+
+.face-avant {
+  background-color: cadetblue;
+  border: 1px solid #30363d;
+}
+
+.face-arriere {
+  background-color: #1a3a5c;
+  border: 1px solid #2e6da4;
+  /*
+    La face arrière est pré-retournée de 180°.
+    Quand l'inner fait son demi-tour, elle revient à 0° et devient lisible.
+  */
+  transform: rotateY(180deg);
+  justify-content: center;
+}
+
+.face-arriere h2 {
+  font-size: 1rem;
+  color: #a8c4e0;
+  margin-bottom: 4px;
+}
+
+.face-arriere p {
+  font-size: 0.8125rem;
+  color: #c8daf0;
+  line-height: 1.65;
+}
+
+.carte-flip:hover {
+    transform: none;
+    box-shadow: none;
+}

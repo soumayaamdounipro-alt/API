@@ -1,0 +1,48 @@
+h1 {
+    color : rgb(255, 2, 2);
+}
+
+#google {
+    color : darkolivegreen; 
+
+}
+
+#lien {
+    color: blueviolet;
+}
+
+#style {
+    color: chocolate;
+}
+
+p {
+    color: rgb(5, 197, 155); font: size 16px;;
+}
+
+.importent {
+    color: rgb(116, 8, 218);
+}
+
+p::first-letter {
+    color: darkmagenta; 
+    size: 100000px; 
+} 
+
+h3 + p + p {
+    color: rgb(92, 138, 24);
+}
+
+input[type="text"][required] { 
+   border-color: rgb(88, 136, 5);
+}
+
+input [type="email"] {
+    background-color: crimson;
+}
+
+div p{
+    color: brown;
+}
+div > p {
+    color: blue;
+}

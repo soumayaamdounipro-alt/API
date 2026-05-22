@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+.carte{
+    max-width:  320px; 
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.image-produit{
+    width: 100%;
+    height: 200px;
+    height: 200px;
+    background-color: #1199b1;
+}
+
+.badge{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    background-color: red;
+    color: #ffffff; 
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+h2{
+    padding: 0 12px;
+    color: #181515;
+}
+
+
+.prix{
+    padding:16px 16px ;
+    color: #000000;
+    font-weight: bold;
+}

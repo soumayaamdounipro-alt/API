@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyseur de contenu</title>
+    <script src="Analyseur.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .panel {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .result {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #eee;
+            margin-top: 10px;
+        }
+        .hidden-text {
+            display: none;
+        }
+        .visible-text {
+            color: blue;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analyseur de contenu</h1>
+
+    <div class="panel">
+        <h2>Contenu à analyser</h2>
+        <div id="contenu-original">
+            <h3>Mon titre <span class="visible-text">visible</span></h3>
+            <p>Voici un paragraphe avec du <strong>texte en gras</strong>.</p>
+            <p class="hidden-text">Ce paragraphe est masqué par CSS.</p>
+            <pre>Ce texte est   préformaté
+avec des     espaces
+et des sauts de   ligne.</pre>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>Analyse</h2>
+        <button id="btn-inner-html">Analyser avec innerHTML</button>
+        <button id="btn-text-content">Analyser avec textContent</button>
+        <button id="btn-inner-text">Analyser avec innerText</button>
+
+        <h3>Résultat :</h3>
+        <pre id="resultat" class="result">Cliquez sur un bouton pour analyser</pre>
+
+        <h3>Longueur du contenu :</h3>
+        <p id="longueur">0 caractères</p>
+    </div>
+
+     
+</body>
+</html>

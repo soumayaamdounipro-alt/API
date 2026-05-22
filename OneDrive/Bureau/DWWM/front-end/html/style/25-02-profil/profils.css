@@ -1,0 +1,71 @@
+body{
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(207, 207, 162);
+}
+
+h1{
+    font-size: 50px;
+    color: #0c4fe0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grille{
+    width: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #7fffd4;
+    display: flex;
+    gap: 20px;
+    
+}
+
+
+.profil{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.avatar{
+    background-color: #6495ed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    margin: 0 auto 70px auto;
+    font-weight: bold;
+}
+.avatar h3{
+    padding: 70px;
+    margin: 0;
+    background-color: #7c7adf;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+
+/* Différentes proportions */
+.profilun {
+  flex: 1;
+}
+
+.profildeux{
+  flex: 2.5;
+}
+
+.profiltrois {
+  flex: 1;
+}
+

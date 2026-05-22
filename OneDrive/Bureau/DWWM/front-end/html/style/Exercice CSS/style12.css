@@ -1,0 +1,54 @@
+/* axes.css — Correction exercice 17 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #2c2c2c;
+}
+
+h1 {
+  color: #1A3A5C;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #2E6DA4;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.conteneur {
+  display: flex;
+  background-color: #e0e8f5;
+  padding: 12px;
+  gap: 10px;
+}
+
+/* Chaque classe applique une direction différente */
+.row         { flex-direction: row; }
+.row-reverse { flex-direction: row-reverse; }
+.column      { flex-direction: column; }
+.column-reverse { flex-direction: column-reverse; }
+
+.item {
+  background-color: #2E6DA4;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  /*
+    En row/row-reverse : les items s'étirent sur toute la hauteur (stretch par défaut).
+    En column/column-reverse : les items s'étirent sur toute la largeur (stretch par défaut).
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

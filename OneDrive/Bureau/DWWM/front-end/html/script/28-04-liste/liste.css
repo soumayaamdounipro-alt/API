@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f3e5f5;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  background: purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  margin: 10px auto;
+  width: 200px;
+  padding: 10px;
+  background: white;
+  list-style: none;
+  border-radius: 5px;
+}

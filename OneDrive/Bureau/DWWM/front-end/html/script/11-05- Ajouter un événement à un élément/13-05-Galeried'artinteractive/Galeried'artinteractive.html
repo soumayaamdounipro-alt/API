@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Art Interactive</title>
+    <link rel="stylesheet" href="Galeried'artinteractive.css">
+</head>
+<body>
+    <div id="header">
+        <h1>🖼️ Galerie d'Art Interactive 🖼️</h1>
+        <p>Utilisez les flèches ← → pour naviguer, Entrée pour sélectionner, Échap pour reset</p>
+    </div>
+
+    <div id="instructions">
+        <p><strong>Contrôles :</strong></p>
+        <p>🡸 🡺 Flèches gauche/droite : Navigation</p>
+        <p>⏎ Entrée : Sélectionner l'œuvre</p>
+        <p>⎋ Échap : Remettre à zéro</p>
+    </div>
+
+    <div id="galerie" class="galerie">
+        <img src="https://picsum.photos/300/200?random=1" alt="Paysage montagneux" data-title="Montagne Mystique" data-artist="Claude Monet">
+        <img src="https://picsum.photos/300/200?random=2" alt="Océan au coucher de soleil" data-title="Coucher Doré" data-artist="Vincent van Gogh">
+        <img src="https://picsum.photos/300/200?random=3" alt="Forêt en automne" data-title="Automne Flamboyant" data-artist="Paul Cézanne">
+        <img src="https://picsum.photos/300/200?random=4" alt="Architecture moderne" data-title="Géométrie Urbaine" data-artist="Piet Mondrian">
+        <img src="https://picsum.photos/300/200?random=5" alt="Nature abstraite" data-title="Abstraction Naturelle" data-artist="Wassily Kandinsky">
+    </div>
+
+    <div id="artwork-info">
+        <h3 id="artwork-title">Montagne Mystique</h3>
+        <p id="artwork-artist">par Claude Monet</p>
+        <p id="artwork-position">Image 1 sur 5</p>
+    </div>
+
+    <div id="keyboard-display">
+        <h3>⌨️ Informations de la dernière touche</h3>
+        <div class="keyboard-row">
+            <span class="key-label">event.key:</span>
+            <span id="display-key">Appuyez sur une touche !</span>
+        </div>
+        <div class="keyboard-row">
+            <span class="key-label">event.code:</span>
+            <span id="display-code">Appuyez sur une touche !</span>
+        </div>
+        <div class="keyboard-row">
+            <span class="key-label">event.keyCode:</span>
+            <span id="display-keycode">Appuyez sur une touche !</span>
+        </div>
+        <div class="keyboard-row">
+            <span class="key-label">Action:</span>
+            <span id="display-action">En attente...</span>
+        </div>
+    </div>
+
+    <script src="Galeried'artinteractive.js"></script>
+</body>
+</html>

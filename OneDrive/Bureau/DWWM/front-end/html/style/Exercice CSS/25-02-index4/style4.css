@@ -1,0 +1,68 @@
+body{
+
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo à gauche, liens à droite */
+  align-items: center;            /* centré verticalement */
+  height: 60px;
+  padding: 0 20px;
+  background-color: #222;
+  color: white;
+}
+a{
+    color: white;
+    display: inline-block;
+}
+
+.navbar a:hover{
+    background-color: cyan;
+}
+
+.contenu{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+/* ===== STAT CARDS ===== */
+.stats {
+  display: flex;
+  justify-content: space-between; /* espace identique entre les cartes */
+  gap: 20px;                      /* espace régulier */
+  margin: 40px 0;
+}
+
+.stat-card {
+                      
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
+  display: flex;
+  justify-content: center;        /* centré horizontalement */
+  align-items: center;            /* centré verticalement */
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  justify-content: space-between; /* gauche / droite */
+  align-items: center;            /* centré verticalement */
+  height: 60px;
+  padding: 0 20px;
+  background-color: #111;
+  color: white;
+}

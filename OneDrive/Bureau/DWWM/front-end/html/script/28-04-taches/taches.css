@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #e3f2fd;
+}
+
+li {
+  margin: 10px auto;
+  width: 220px;
+  padding: 10px;
+  background: white;
+  list-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #bbdefb;
+}
+
+.done {
+  background: #c8e6c9;
+}

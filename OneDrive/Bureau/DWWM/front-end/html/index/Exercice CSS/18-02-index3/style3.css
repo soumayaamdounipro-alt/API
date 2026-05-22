@@ -1,0 +1,28 @@
+html{
+    font-size: 60px;
+}
+
+
+body {
+    font-size: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: #d40ee6;
+}
+
+/*dossier */
+.grimoire{
+    width: 200px;
+    margin: 20px;
+    padding:30px;
+    border: #d40ee6;
+    box-shadow: #c2d3e9;
+    background-color: hsl(180, 100%, 50%), hsla(197, 81%, 21%, 0.5);  
+}
+
+.incantation::first-letter{
+    font-size: 3.0rem;
+}
+ 
+.incantation{
+    font-size: 5.0em;
+}

@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.instructions {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffeaa7;
+}
+
+.note-actuelle {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#note-affichee {
+    color: #74b9ff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.touche {
+    width: 80px;
+    height: 200px;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f2f6 100%);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.touche:nth-child(1) { border-bottom: 4px solid #e74c3c; }
+.touche:nth-child(2) { border-bottom: 4px solid #f39c12; }
+.touche:nth-child(3) { border-bottom: 4px solid #f1c40f; }
+.touche:nth-child(4) { border-bottom: 4px solid #2ecc71; }
+.touche:nth-child(5) { border-bottom: 4px solid #3498db; }
+.touche:nth-child(6) { border-bottom: 4px solid #9b59b6; }
+.touche:nth-child(7) { border-bottom: 4px solid #e91e63; }
+.touche:nth-child(8) { border-bottom: 4px solid #34495e; }
+
+.touche.active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background: linear-gradient(180deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+}
+
+.lettre {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.touche.active .lettre {
+    color: white;
+}
+
+.nom-note {
+    font-size: 1em;
+    color: #636e72;
+    font-weight: bold;
+}
+
+.touche.active .nom-note {
+    color: white;
+}

@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #be9553;
+}
+
+#zone {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card {
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+}
